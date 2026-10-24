@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Cortège</title>
+<meta name="description" content="Appli de sécurité pour les manifestations, pour Android. Elle marche sans réseau : pas de compte, pas de serveur.">
+<meta property="og:title" content="Cortège">
+<meta property="og:description" content="Appli de sécurité pour les manifestations, pour Android. Elle marche sans réseau : pas de compte, pas de serveur.">
+<meta property="og:image" content="https://cortege-app.github.io/logo.png">
+<link rel="icon" href="logo.png">
+<style>
+  :root {
+    --fond: #000;
+    --texte: #f2f2f2;
+    --discret: #a8a8a8;
+    --accent: #ffd60a;
+    --ligne: #3a3a3a;
+    --danger: #ff5a4f;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--fond);
+    color: var(--texte);
+    font: 18px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 36rem; margin: 0 auto; padding: 24px 16px 56px; }
+  header { display: flex; align-items: center; gap: 16px; margin-bottom: 8px; }
+  header img { width: 72px; height: 72px; flex: none; }
+  h1 { margin: 0; font-size: 2.2rem; line-height: 1.1; }
+  h2 { margin: 40px 0 12px; font-size: 1.35rem; }
+  p { margin: 0 0 14px; }
+  .lead { color: var(--discret); margin-bottom: 24px; }
+  .attention {
+    border: 2px solid var(--danger);
+    padding: 14px 16px;
+    margin: 0 0 20px;
+  }
+  .attention strong { display: block; margin-bottom: 4px; }
+  .telecharger {
+    display: block;
+    background: var(--accent);
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.3rem;
+    padding: 20px 16px;
+    min-height: 64px;
+  }
+  .telecharger small { display: block; font-weight: 500; font-size: 0.95rem; margin-top: 2px; }
+  .telecharger:focus-visible, a:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+  ol, .liste { padding-left: 1.4em; margin: 0; }
+  ol li, .liste li { margin-bottom: 14px; padding-left: 4px; }
+  a { color: var(--accent); }
+  code, .empreinte {
+    font: 0.85rem/1.4 ui-monospace, "Cascadia Mono", Consolas, monospace;
+    word-break: break-all;
+  }
+  .empreinte { display: block; border: 1px solid var(--ligne); padding: 10px 12px; margin: 8px 0 14px; }
+  .discret { color: var(--discret); font-size: 0.95rem; }
+  footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--ligne); }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="logo.png" alt="Logo de Cortège : une maille jaune en forme de C autour d'un point blanc" width="72" height="72">
+    <h1>Cortège</h1>
+  </header>
+  <p class="lead">Appli de sécurité pour les manifestations, pour Android. Elle marche sans réseau : pas de compte, pas de serveur.</p>
+
+  <div class="attention" role="note">
+    <strong>Version d'essai.</strong>
+    Code non relu de l'extérieur, fiches Droits et Secours en brouillon non relu. Ne t'y fie pas encore si tu risques gros. <a href="#a-savoir">À savoir avant d'installer</a>.
+  </div>
+
+  <a class="telecharger" href="https://github.com/cortege-app/cortege/releases/download/v0.1.0-essai/Cortege-0.1.0-essai.apk">
+    Télécharger Cortège
+    <small>Version 0.1.0-essai, 53 Mo, pour Android</small>
+  </a>
+
+  <h2>Installer en 4 étapes</h2>
+  <ol>
+    <li>Appuie sur le bouton jaune. Ton téléphone télécharge le fichier.</li>
+    <li>Ouvre le fichier téléchargé : dans la notification, ou dans le dossier « Téléchargements ».</li>
+    <li>Android dit que ton téléphone n'est pas autorisé à installer des applis depuis cette source : c'est normal, l'appli n'est pas dans un magasin. Appuie sur « Paramètres », active « Autoriser depuis cette source », reviens en arrière, puis appuie sur « Installer ». Si Google Play Protect affiche un avertissement, choisis d'installer quand même.</li>
+    <li>Ouvre Cortège et choisis ton code. Le <a href="https://github.com/cortege-app/cortege/blob/main/MODE-D-EMPLOI.md">mode d'emploi</a> t'explique la suite pas à pas.</li>
+  </ol>
+
+  <h2 id="a-savoir">À savoir avant d'installer</h2>
+  <ul class="liste">
+    <li>Aucune personne extérieure n'a relu le code.</li>
+    <li>Les fiches Droits et Secours sont des brouillons écrits par un assistant, que personne n'a relus. Pour un doute sur un droit, demande à un avocat. Pour un geste de secours, appelle le 15 ou le 112.</li>
+    <li>Essayée sur deux téléphones Android seulement. Pas de version iPhone.</li>
+    <li>Rien n'est envoyé sur internet : l'appli n'a même pas le droit de se connecter.</li>
+  </ul>
+
+  <h2>Vérifier le fichier (facultatif)</h2>
+  <p>Après le téléchargement, l'empreinte SHA-256 du fichier doit être celle-ci :</p>
+  <span class="empreinte">ecccc6914e901ecdf1045384cbc0830af08389a569684f05756027a1381cb593</span>
+  <p class="discret">Une fois l'appli installée, l'écran « Partager l'appli » affiche l'empreinte courte <code>4e8a f9b7 6a37 f23d</code> : si tu passes l'appli à un proche, il doit voir la même. Le détail est sur la <a href="https://github.com/cortege-app/cortege/releases/tag/v0.1.0-essai">page de cette version</a>.</p>
+
+  <footer>
+    <p class="discret">Cette page n'utilise aucun traceur ni aucun service extérieur. Cortège est un logiciel libre (GPL-3.0). <a href="https://github.com/cortege-app/cortege">Code source</a> · <a href="https://github.com/cortege-app/cortege/blob/main/SECURITY.md">Signaler une faille</a></p>
+  </footer>
+</main>
+</body>
+</html>
